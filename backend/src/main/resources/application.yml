@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: sistema-de-vendas-com-promocoes
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:27017/sistema_vendas_promocoes}
+
+server:
+  port: ${PORT:8080}
+
+jwt:
+  secret: ${JWT_SECRET:TroqueEstaChaveJwtComPeloMenos32Caracteres}
+  expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+
+app:
+  bootstrap:
+    admin:
+      name: ${BOOTSTRAP_ADMIN_NAME:Administrador}
+      cpf: ${BOOTSTRAP_ADMIN_CPF:00000000000}
+      username: ${BOOTSTRAP_ADMIN_USERNAME:admin}
+      password: ${BOOTSTRAP_ADMIN_PASSWORD:admin123}
